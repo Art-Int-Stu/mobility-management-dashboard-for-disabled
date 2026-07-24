@@ -4,7 +4,7 @@ import os
 from collections import Counter
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-API_CSV = os.path.join(BASE_DIR, "데이터", "api", "calltaxi_2025_정제.csv")
+API_CSV = os.path.join(BASE_DIR, "데이터", "api", "csv", "calltaxi_2025_정제.csv")
 EXIST_CSV = os.path.join(BASE_DIR, "데이터", "서울시설공단_장애인콜택시 탑승내역_20251231.csv")
 REPORT_PATH = os.path.join(BASE_DIR, "데이터", "api", "cross_validate_리포트.md")
 

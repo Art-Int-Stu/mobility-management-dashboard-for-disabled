@@ -10,10 +10,10 @@ import os
 from collections import defaultdict, deque
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-API_CSV = os.path.join(BASE_DIR, "데이터", "api", "calltaxi_2025_정제.csv")
+API_CSV = os.path.join(BASE_DIR, "데이터", "api", "csv", "calltaxi_2025_정제.csv")
 EXIST_CSV = os.path.join(BASE_DIR, "데이터", "서울시설공단_장애인콜택시 탑승내역_20251231.csv")
-MERGED_CSV = os.path.join(BASE_DIR, "데이터", "api", "calltaxi_2025_병합.csv")
-UNMATCHED_EXIST_CSV = os.path.join(BASE_DIR, "데이터", "api", "calltaxi_2025_보유CSV_미매칭.csv")
+MERGED_CSV = os.path.join(BASE_DIR, "데이터", "api", "csv", "calltaxi_2025_병합.csv")
+UNMATCHED_EXIST_CSV = os.path.join(BASE_DIR, "데이터", "api", "csv", "calltaxi_2025_보유CSV_미매칭.csv")
 REPORT_PATH = os.path.join(BASE_DIR, "데이터", "api", "merge_리포트.md")
 
 EXTRA_COLS = ["접수일시", "하차일시", "이용목적", "요금", "승차거리", "차량구분_보유", "장애유형"]

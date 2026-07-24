@@ -9,7 +9,8 @@ import urllib.request
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENV_PATH = os.path.join(BASE_DIR, ".env")
 OUT_DIR = os.path.join(BASE_DIR, "데이터", "api")
-os.makedirs(OUT_DIR, exist_ok=True)
+CSV_DIR = os.path.join(OUT_DIR, "csv")
+os.makedirs(CSV_DIR, exist_ok=True)
 
 
 def load_api_key():
@@ -75,8 +76,8 @@ def main():
     for r in gy:
         r["시영여부"] = "Y" if r["PKLT_CD"] in si_codes else "N"
 
-    write_csv(os.path.join(OUT_DIR, "공영주차장_목록.csv"), gy)
-    write_csv(os.path.join(OUT_DIR, "시영주차장_목록.csv"), si)
+    write_csv(os.path.join(CSV_DIR, "공영주차장_목록.csv"), gy)
+    write_csv(os.path.join(CSV_DIR, "시영주차장_목록.csv"), si)
 
     gy_by_code = {r["PKLT_CD"]: r for r in gy}
     gy_names_norm = {normalize(r["PKLT_NM"]): r for r in gy}

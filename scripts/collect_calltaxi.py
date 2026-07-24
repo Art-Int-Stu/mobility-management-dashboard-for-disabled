@@ -10,9 +10,10 @@ from datetime import date, timedelta
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENV_PATH = os.path.join(BASE_DIR, ".env")
 OUT_DIR = os.path.join(BASE_DIR, "데이터", "api")
-os.makedirs(OUT_DIR, exist_ok=True)
+CSV_DIR = os.path.join(OUT_DIR, "csv")
+os.makedirs(CSV_DIR, exist_ok=True)
 
-CSV_PATH = os.path.join(OUT_DIR, "calltaxi_2025.csv")
+CSV_PATH = os.path.join(CSV_DIR, "calltaxi_2025.csv")
 CHECKPOINT_PATH = os.path.join(OUT_DIR, "checkpoint.json")
 FAILED_LOG_PATH = os.path.join(OUT_DIR, "collect_calltaxi_failed.log")
 

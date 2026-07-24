@@ -10,8 +10,9 @@ import re
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.join(BASE_DIR, "데이터", "api")
-RAW_CSV = os.path.join(OUT_DIR, "calltaxi_2025.csv")
-CLEAN_CSV = os.path.join(OUT_DIR, "calltaxi_2025_정제.csv")
+CSV_DIR = os.path.join(OUT_DIR, "csv")
+RAW_CSV = os.path.join(CSV_DIR, "calltaxi_2025.csv")
+CLEAN_CSV = os.path.join(CSV_DIR, "calltaxi_2025_정제.csv")
 REPORT_PATH = os.path.join(OUT_DIR, "calltaxi_2025_검증_리포트.md")
 
 TIME_RE = re.compile(
